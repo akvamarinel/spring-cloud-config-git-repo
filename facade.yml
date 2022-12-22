@@ -1,6 +1,9 @@
 spring:
   application:
     name: facade
+jwt:
+  secret: spring
+
 server:
   port: 8091
 eureka:
