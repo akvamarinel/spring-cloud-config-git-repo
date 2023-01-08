@@ -3,9 +3,9 @@ spring:
     name: restaurant-service
   datasource:
     #jdbc:postgresql://localhost:5432/postgres
-      url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5433}/${POSTGRES_DB:monsters}
+      url: ${POSTGRES_URL}
     username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:12345}
+    password: ${POSTGRES_PASSWORD:postgres}
   jpa:
     hibernate:
       ddl-auto: update
