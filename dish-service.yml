@@ -2,8 +2,7 @@ spring:
   application:
     name: dish-service
   datasource:
-    #jdbc:postgresql://localhost:5432/postgres
-    url: ${POSTGRES_URL}
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:postgres}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
   jpa:
@@ -16,9 +15,4 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 8086
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
+
