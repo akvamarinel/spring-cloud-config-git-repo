@@ -3,7 +3,7 @@ spring:
     name: restaurant-service
   datasource:
     #jdbc:postgresql://localhost:5432/postgres
-      url: ${POSTGRES_URL}
+    url: ${POSTGRES_URL}
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD:postgres}
   jpa:
